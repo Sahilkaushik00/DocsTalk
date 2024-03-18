@@ -1,0 +1,133 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* App container */
+.appBlock {
+  display: flex; /* Center content horizontally */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Align content horizontally */
+  justify-content: center; /* Align content vertically (within viewport) */
+  min-height: 100vh; /* Ensure content fills the viewport */
+  padding: 2rem; /* Add some spacing */
+}
+
+/* Form styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Allow form to fill container width */
+  max-width: 500px; /* Set a maximum width for responsiveness */
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+.questionLabel,
+.fileLabel {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Input fields */
+.questionInput,
+.fileInput {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+.questionInput {
+  width: 100%; /* Ensure question input fills available width */
+}
+
+/* File upload area */
+.fileInput[type="file"] {
+  display: none; /* Hide the default file input element */
+}
+
+/* Styling for React Dropzone component */
+.form .MuiDropzone-root {
+  border: 1px dashed #ccc;
+  border-radius: 4px;
+  padding: 1rem;
+  cursor: pointer; /* Indicate hover/click area for file selection */
+}
+
+.form .MuiDropzone-root:hover {
+  border-color: #aaa;
+}
+
+.form .MuiDropzone-root p {
+  margin: 0;
+  text-align: center; /* Center text within file upload area */
+  font-size: 14px;
+  color: #999;
+}
+
+/* Submit button */
+.submitBtn {
+  background-color: #4CAF50; /* Green color for submit button */
+  color: white;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.submitBtn:hover {
+  background-color: #46a049;
+}
+
+.submitBtn[disabled] {
+  background-color: #ddd;
+  cursor: default; /* Disable default pointer behavior */
+}
+
+/* Result display */
+.resultOutput {
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Loading indicator */
+.form p { /* Assume loading message is displayed within the form */
+  color: #aaa;
+  font-weight: italic;
+  margin-top: 1rem;
+}
+
+/* Modal styling (assuming use of react-modal) */
+.upload-success-modal {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.upload-success-modal-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.upload-success-modal h2 {
+  margin-bottom: 1rem;
+}
+
+.upload-success-modal button {
+  background-color: #4CAF50;
+  color
